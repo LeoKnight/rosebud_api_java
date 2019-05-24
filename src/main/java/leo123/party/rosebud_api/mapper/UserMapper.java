@@ -1,4 +1,4 @@
-package leo123.party.rosebud_api.model;
+package leo123.party.rosebud_api.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -14,5 +14,17 @@ public interface UserMapper {
 
     int insertList(@Param("users") List<User> users);
 
-    int updateByPrimaryKeySelective(@Param("user") User user);
+    User updateByPrimaryKeySelective(@Param("user") User user);
+
+    List<User> findByName(@Param("name")String name);
+
+    User findById(@Param("id")Long id);
+
+
+
+
+
+
+
+
 }

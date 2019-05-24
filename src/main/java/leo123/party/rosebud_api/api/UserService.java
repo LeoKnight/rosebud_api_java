@@ -10,5 +10,9 @@ public interface UserService{
 
     int insertList(List<User> users);
 
-    int updateByPrimaryKeySelective(User user);
+    User updateByPrimaryKeySelective(User user);
+
+    List<User> findByName(String name);
+
+    User findById(Long id);
 }

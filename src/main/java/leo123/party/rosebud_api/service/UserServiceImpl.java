@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 import leo123.party.rosebud_api.model.User;
-import leo123.party.rosebud_api.model.UserMapper;
+import leo123.party.rosebud_api.mapper.UserMapper;
 import leo123.party.rosebud_api.api.UserService;
 
 @Service
@@ -29,7 +29,17 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public int updateByPrimaryKeySelective(User user){
+    public User updateByPrimaryKeySelective(User user){
         return userMapper.updateByPrimaryKeySelective(user);
+    }
+
+    @Override
+    public List<User> findByName(String name) {
+        return userMapper.findByName(name);
+    }
+
+    @Override
+    public User findById(Long id) {
+        return userMapper.findById(id);
     }
 }
