@@ -52,10 +52,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>eleme-jarch</groupId>
-            <artifactId>cool-lombok</artifactId>
-            <version>1.0.9</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
         </dependency>
+
     </dependencies>
 
     <build>

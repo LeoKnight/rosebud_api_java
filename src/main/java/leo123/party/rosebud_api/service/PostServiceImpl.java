@@ -6,6 +6,8 @@ import leo123.party.rosebud_api.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class PostServiceImpl implements PostService {
     @Autowired
@@ -13,6 +15,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public int createPost(Post post) {
+        post.setCommitId(UUID.randomUUID().toString());
         return postMapper.insert(post);
     }
 }

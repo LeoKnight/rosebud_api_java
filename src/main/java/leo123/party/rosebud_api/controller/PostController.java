@@ -24,5 +24,13 @@ public class PostController {
         return id;
     }
 
+    @PutMapping("/{id}")
+    public Long updatePostById(
+            @PathVariable Long id,
+            @RequestBody Post post
+    ){
+//        postService.updatePost()
+        return null;
+    }
 
 }
